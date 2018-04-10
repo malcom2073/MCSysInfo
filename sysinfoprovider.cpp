@@ -11,7 +11,7 @@ SysInfoProvider::SysInfoProvider(QObject *parent) : QObject(parent)
 	m_ipc->connectToHost("127.0.0.1",12345);
 	QTimer *timer = new QTimer(this);
 	connect(timer,SIGNAL(timeout()),this,SLOT(timerTick()));
-	timer->start(1000);
+	timer->start(100);
 }
 void SysInfoProvider::timerTick()
 {
